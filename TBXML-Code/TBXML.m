@@ -910,10 +910,6 @@
 			currentAttributeBuffer = 0;
 		}
 	}
-    
-#ifndef ARC_ENABLED
-    [super dealloc];
-#endif
 }
 
 - (TBXMLElement*) nextAvailableElement {
