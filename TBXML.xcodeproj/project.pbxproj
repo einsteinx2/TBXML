@@ -309,7 +309,7 @@
 		829FA09314D5B52A00D18697 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "71 Squared";
 			};
 			buildConfigurationList = 829FA09614D5B52A00D18697 /* Build configuration list for PBXProject "TBXML" */;
@@ -439,14 +439,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DEAD_CODE_STRIPPING = NO;
 				DSTROOT = /tmp/TBXML_iOS.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TBXML-Support/TBXML-iOS-Prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = include/TBXML;
 				SDKROOT = iphoneos;
+				SEPARATE_STRIP = NO;
 				SKIP_INSTALL = YES;
+				STRIP_STYLE = debugging;
 			};
 			name = Debug;
 		};
@@ -454,14 +459,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
 				DSTROOT = /tmp/TBXML_iOS.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TBXML-Support/TBXML-iOS-Prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = include/TBXML;
 				SDKROOT = iphoneos;
+				SEPARATE_STRIP = NO;
 				SKIP_INSTALL = YES;
+				STRIP_STYLE = debugging;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -553,6 +563,7 @@
 		829FA0C314D5B52A00D18697 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TBXML-Support/TBXML-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -562,6 +573,7 @@
 		829FA0C414D5B52A00D18697 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TBXML-Support/TBXML-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -571,6 +583,7 @@
 		829FA0C614D5B52A00D18697 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TBXML-Support/TBXML-Prefix.pch";
@@ -583,6 +596,7 @@
 		829FA0C714D5B52A00D18697 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TBXML-Support/TBXML-Prefix.pch";
