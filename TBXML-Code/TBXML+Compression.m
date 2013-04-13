@@ -265,7 +265,7 @@ static char encodingTable[64] = {
 	if ([self length] == 0) return self;
 	
 	unsigned full_length = (unsigned)[self length];
-	unsigned half_length = [self length] / 2;
+	unsigned half_length = (unsigned)[self length] / 2;
 	
 	NSMutableData *decompressed = [NSMutableData dataWithLength: full_length + half_length];
 	BOOL done = NO;
